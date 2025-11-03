@@ -312,6 +312,25 @@ header {
   transform: translateY(-5px);
 }
 
+
+/* 追加：アニメーション付きの高さ変化 */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: #111;
+  transition: all 0.3s ease;
+}
+
+header.hide {
+  transform: translateY(-100%);
+}
+
 /* スマホ用（デフォルト） */
 @media (max-width: 768px) {
   .name-bold {
@@ -328,6 +347,26 @@ header {
   padding: 1rem 0;
   list-style: none;
 }
+
+  header {
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  .logo {
+    width: 140px;
+    margin-bottom: 0;
+  }
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .main-nav a {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+
 .photos{
   display: flex;
   flex-direction: column; /* ←縦並び */
